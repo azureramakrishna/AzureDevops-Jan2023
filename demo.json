@@ -1,0 +1,55 @@
+{
+    "InstituteName": "SAANVIK IT",
+    "TrainingModule": "AzureDevopswithIAC",
+    "TrainerName": "Ramakrishna",
+    "ContactNumber": 9513184144,
+    "Address": {
+        "plotno": 123,
+        "location": "kukatpally",
+        "city": "Hyderabad",
+        "pincode": 50085,
+        "state": "Telangana"
+    },
+    "Attendies": [
+        {
+            "Name": "Asha",
+            "Location": "Banagalore",
+            "IsAzureAdmin": true
+        },
+        {
+            "Name": "Swami",
+            "Location": "Banagalore",
+            "IsAzureAdmin": true
+        },
+        {
+            "Name": "Koteswarrao",
+            "Location": "Vijayawada",
+            "IsAzureAdmin": false
+        },
+        {
+            "Name": "Ramprasad",
+            "Location": "Hyderabad",
+            "IsAzureAdmin": true
+        },
+        {
+            "Name": "Asha",
+            "Location": "Banagalore",
+            "IsAzureAdmin": true
+        },
+        {
+            "Name": "Teja",
+            "Location": "Hyderabad",
+            "IsAzureAdmin": false
+        },
+        {
+            "Name": "Vinay",
+            "Location": "Hyderabad",
+            "IsAzureAdmin": true
+        },
+        {
+            "Name": "Vishnu",
+            "Location": "Hyderabad",
+            "IsAzureAdmin": true
+        }
+    ]
+}
