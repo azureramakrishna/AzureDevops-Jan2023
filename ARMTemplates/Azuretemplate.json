@@ -1,0 +1,73 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "storage_account_name": {
+           "type": "string",
+           "metadata": {
+                "description": "Name of the storage account"
+            }
+        },
+        "storage_account_type": {
+           "type": "string",
+           "metadata": {
+                "description": "Storage account type or SKU"
+            },
+            "allowedValues" : [
+                "Premium_LRS",
+                "Premium_ZRS",
+                "Standard_GRS",
+                "Standard_GZRS",
+                "Standard_LRS",
+                "Standard_RAGRS",
+                "Standard_RAGZRS",
+                "Standard_ZRS"
+            ]
+        }
+    },
+    "variables": {
+        "tags": {
+            "createdby": "Ramakrishna",
+            "Environment": "DEV",
+            "Department": "IT",
+            "Project": "SAANVIKIT"
+        },
+        "virtual_network_name": "saanvikit-vnet",
+        "vnet_addressPrefixes": ["172.16.0.0/24"],
+        "subnet_name": "saanvikit-snet",
+        "subnet_addressPrefix": "172.16.0.0/27"
+    },
+    "resources": [
+        {
+            "name": "[parameters('storage_account_name')]",
+            "type": "Microsoft.Storage/storageAccounts",
+            "apiVersion": "2015-06-15",
+            "location": "[resourceGroup().location]",
+            "tags": "[variables('tags')]",
+            "properties": {
+                "accountType": "[parameters('storage_account_type')]"
+            }
+        },
+        {
+            "name": "[variables('virtual_network_name')]",
+            "type": "Microsoft.Network/virtualNetworks",
+            "apiVersion": "2018-08-01",
+            "location": "[resourceGroup().location]",
+            "tags": "[variables('tags')]",
+            "properties": {
+                "addressSpace": {
+                    "addressPrefixes": "[variables('vnet_addressPrefixes')]"
+                },
+                "subnets": [
+                    {
+                        "name": "[variables('subnet_name')]",
+                        "properties": {
+                            "addressPrefix": "[variables('subnet_addressPrefix')]"
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "outputs": {}
+}
