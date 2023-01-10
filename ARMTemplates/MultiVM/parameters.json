@@ -2,17 +2,14 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "storage_account_name": {
-            "value": "Saanvikit20230109"
-        },
         "vnet_name": {
             "value": "saanvikit-vnet"
         },
         "virtual_machine_name": {
-            "value": "saanvikit-vm"
+            "value": "testvm"
         },
         "vm_size": {
-            "value": "Standard_D2s_v3"
+            "value": "Standard_Ds1_v2"
         },
         "adminuser": {
             "value": "azureuser"
@@ -24,6 +21,9 @@
                 },
                 "secretName": "WinVMPassword"
             }
+        },
+        "count_value": {
+            "value": 4
         }
     }
 }
