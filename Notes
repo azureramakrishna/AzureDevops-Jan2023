@@ -1,0 +1,33 @@
+Terraform:  Open source IAC - Harshicorp
+----------
+
+ARMTemplate 												Terraform
+-----------													---------
+1. IAC Tool													1. IAC Tool 
+2. Specific to Azure 										2. Opensource (Azure, AWS, GCP etc)
+3. JSON format												3. HCL format (Harshicorp configuration language)
+4. Extentions - .JSON										4. Extentions - .tf 
+5. Schema 													5. Building blocks:
+																Provider
+	Contentversion												Resources
+	Parameters													Outputs
+	apiversion
+	functions
+	Varibales
+	Resources
+	Outputs
+6. template.json											6. main.tf
+	parameters.json												variables.tf
+7. New-AzResourceGroupDeployment -ResourceGroupName			7. Terraform Lifecycle:
+   -TemplateFile  -TemplateParameterFile -verbose				terraform init
+																terraform validate
+																terraform plan
+																terraform apply
+																terraform destroy
+
+Getting started with Terraform:
+------------------------------
+1. Install the terraform 
+	https://developer.hashicorp.com/terraform/downloads
+	
+2. VSCode Extensions --> HashiCorp Terraform & Azure Terraform
