@@ -1,0 +1,13 @@
+resource_group_name = "saanvikit-rg"
+location = "westus"
+storage_account_name = "saanvikit20230118"
+virtual_network_name = "saanvikit-vnet"
+virtual_network_addressPrefix = ["172.16.0.0/24"]
+subnet_name = "saanvikit-snet"
+subnet_addressPrefix = ["172.16.0.0/24"]
+public_ip_name = "saanvikit-pubip"
+nsg_name = "saanvikit-nsg"
+nic_name = "saanvikit-nic"
+vm_name = "saanvikit-vm"
+vm_size = "Standard_Ds1_v2"
+count_value = 5
